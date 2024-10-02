@@ -1,12 +1,29 @@
 ### Keep going on learning
 
-``Section 3:Next.js Tutorial 48. Remove Boilerplate``
+``Section 3:Next.js Tutorial 52. Shadcn/ui Button Component``
 
-**🏆 48 of 136 (total 173) complete.**
+**🏆 52 of 136 (total 173) complete.**
 
 #### Key notes:
 
-- To be continued
+- Install the shadcn/ui package
+  - use ```npx shadcn@latest init``` to initialize the package
+  - use ``npx shadcn@latest add button``` to add a button
+---
+*24/10/02*
+- Shadcn UI 
+  - **Purpose of `asChild` in Shadcn UI**:
+  - The `asChild` property allows you to wrap a component as a child of another component.
+  - This is particularly useful when you need to customize the behavior or style of a component.
+  - **Example Usage**:
+    ```jsx
+    import { Button } from "@/components/ui/button";
+    import Link from "next/link";
+
+    <Button asChild>
+      <Link href="/login">Login</Link>
+    </Button>
+    ```
 
 ---
 
