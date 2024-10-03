@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js Tutorial 52. Shadcn/ui Button Component``
+``Section 3:Next.js Tutorial 54. Navbar Structure``
 
-**🏆 52 of 136 (total 173) complete.**
+**🏆 54 of 136 (total 173) complete.**
 
 #### Key notes:
 
@@ -24,7 +24,8 @@
       <Link href="/login">Login</Link>
     </Button>
     ```
-
+- **Navbar Structure**:
+  - set up the structure of the navbar
 ---
 
 ### Next App
