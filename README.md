@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js Tutorial 54. Navbar Structure``
+``Section 3:Next.js Tutorial 56. Change Theme with Shadcn/ui``
 
-**🏆 54 of 136 (total 173) complete.**
+**🏆 56 of 136 (total 173) complete.**
 
 #### Key notes:
 
@@ -24,8 +24,11 @@
       <Link href="/login">Login</Link>
     </Button>
     ```
+    - Updaet the theme in the `globals.css` file copied from the Shadcn UI documentation. [Themes](https://ui.shadcn.com/themes)
 - **Navbar Structure**:
   - set up the structure of the navbar
+- Install the `react-icons` package
+  - use `npm install react-icons` to install the package
 ---
 
 ### Next App
