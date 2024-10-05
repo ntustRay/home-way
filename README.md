@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js Tutorial 56. Change Theme with Shadcn/ui``
+``Section 3:Next.js Tutorial 57. Setup Dark Mode with Shadcn/ui``
 
-**🏆 56 of 136 (total 173) complete.**
+**🏆 57 of 136 (total 173) complete.**
 
 #### Key notes:
 
@@ -29,6 +29,11 @@
   - set up the structure of the navbar
 - Install the `react-icons` package
   - use `npm install react-icons` to install the package
+- Set up the Dark Mode
+  - use `npm install next-themes` to install the package
+  - create a new file `app/theme-provider.tsx` to set up the theme provider
+  - Follow the instructions in the [Next.js Dark Mode](https://ui.shadcn.com/docs/dark-mode/next) documentation to set up the dark mode
+  - Copy the code from the documentation to set up the dark mode
 ---
 
 ### Next App
