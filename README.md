@@ -34,6 +34,9 @@
   - create a new file `app/theme-provider.tsx` to set up the theme provider
   - Follow the instructions in the [Next.js Dark Mode](https://ui.shadcn.com/docs/dark-mode/next) documentation to set up the dark mode
   - Copy the code from the documentation to set up the dark mode
+- Set up the User dropdown list 
+  - create a new file `utils/links.ts` to store the links data
+  - update the file `components/navbar/LinksDropdown.tsx` to set up the dropdown list
 ---
 
 ### Next App
