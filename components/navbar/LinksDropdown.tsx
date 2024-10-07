@@ -28,8 +28,8 @@ function LinksDropdown() {
       >
         {links.map((link, index) => {
           return (
-            <DropdownMenuItem key={link.href + index}>
-              <Link href={link.href} className='captialize w-full'>
+            <DropdownMenuItem key={link.href}>
+              <Link href={link.href} className='capitalize w-full'>
                 {link.label}
               </Link>
             </DropdownMenuItem>

@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js Tutorial 57. Setup Dark Mode with Shadcn/ui``
+``Section 3:Next.js Tutorial 59. 59. Setup and Customize Clerk Auth Provider``
 
-**🏆 57 of 136 (total 173) complete.**
+**🏆 59 of 136 (total 173) complete.**
 
 #### Key notes:
 
@@ -37,6 +37,10 @@
 - Set up the User dropdown list 
   - create a new file `utils/links.ts` to store the links data
   - update the file `components/navbar/LinksDropdown.tsx` to set up the dropdown list
+- Install the Clerk package
+  - use `npm install @clerk/nextjs` to install the package
+  - create a new file `middleware.ts` to set up the middleware
+  - add the environment variables to the `.env.local` file
 ---
 
 ### Next App
