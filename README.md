@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js Tutorial 59. 59. Setup and Customize Clerk Auth Provider``
+``Section 3:Next.js Tutorial 61. LinksDropdown Component``
 
-**🏆 59 of 136 (total 173) complete.**
+**🏆 61 of 136 (total 173) complete.**
 
 #### Key notes:
 
@@ -41,6 +41,14 @@
   - use `npm install @clerk/nextjs` to install the package
   - create a new file `middleware.ts` to set up the middleware
   - add the environment variables to the `.env.local` file
+- Set up the Toast component
+  - update the file `providers.tsx` to include the toaster component
+  - use the `useToast` hook to display the toast message
+  - update the file `components/navbar/LinksDropdown.tsx` to include the toaster component
+    - use the `SignedIn` and `SignedOut` components to display the user status
+    - use the `SignInButton` and `SignUpButton` components to display the sign-in and sign-up buttons
+  - updaet the next.config.js file to fix the cors issue in codespaces
+    - add the experimental, serverActions and allowedOrigins to the next.config.js file
 ---
 
 ### Next App
