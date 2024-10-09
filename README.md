@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js Tutorial 61. LinksDropdown Component``
+``Section 3:Next.js Tutorial Create Profile - Setup``
 
-**🏆 61 of 136 (total 173) complete.**
+**🏆 62 of 136 (total 173) complete.**
 
 #### Key notes:
 
@@ -49,6 +49,13 @@
     - use the `SignInButton` and `SignUpButton` components to display the sign-in and sign-up buttons
   - updaet the next.config.js file to fix the cors issue in codespaces
     - add the experimental, serverActions and allowedOrigins to the next.config.js file
+- Set up the Profile page
+  - create a new file `pages/profile/create.tsx` to set up the profile page
+  - add to set the clerk login / sign up redirect url in the `.env.local` file
+    ```bash
+    NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL=/profile/create
+    NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/profile/create
+    ```
 ---
 
 ### Next App
