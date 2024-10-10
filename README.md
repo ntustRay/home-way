@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js Tutorial Create Profile - Setup``
+``Section 3:Next.js 66. Refactor Create Profile``
 
-**🏆 62 of 136 (total 173) complete.**
+**🏆 66 of 136 (total 173) complete.**
 
 #### Key notes:
 
@@ -56,6 +56,13 @@
     NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL=/profile/create
     NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/profile/create
     ```
+- Refactor the Create Profile page
+  - Add the file `utils/actions.ts` to include the user status check
+  - Add the file `components/form/FormContainer.tsx` to set up the form container
+  - Add the file `components/form/FormInput.tsx` to set up the form input
+  - Add the file `components/form/Buttons.tsx` to set up the form buttons
+  - Set up the `.eslintrc.json` file to include the rules for the any of type warning
+    - add the `@typescript-eslint/no-explicit-any` rule to the `.eslintrc.json` file
 ---
 
 ### Next App

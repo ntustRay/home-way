@@ -11,6 +11,7 @@ type SumbitButtonProps = {
 
 export const SubmitButton = ({className = '', text = 'submit'}: SumbitButtonProps) => {
   const {pending} = useFormStatus()
+  
   return (
     <Button
       type='submit'
