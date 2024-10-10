@@ -1,7 +1,6 @@
 import React from 'react';
-import {Label} from '@/components/ui/label';
-import {Input} from '@/components/ui/input';
-import {Button} from '@/components/ui/button';
+
+
 
 const createProfileAction = async (formData: FormData) => {
   'use server'
@@ -12,16 +11,12 @@ const createProfileAction = async (formData: FormData) => {
 const CreateProfilePage = () => {
   return (
     <section>
-      <h1 className='text-2xl font-semibold mb-8 capitalize'>
+      <h1 className='mb-8 font-semibold text-2xl capitalize'>
         new user
       </h1>
-      <div className='border p-8 roundered-md max-w-lg'>
+      <div className='p-8 border max-w-lg roundered-md'>
         <form action={createProfileAction}>
-          <div className='mb-2'>
-            <Label htmlFor='firstName'>First Name</Label>
-            <Input type='text' id='firstName' name='firstName' />
-          </div>
-          <Button type='submit' size={'lg'}>Create Profile</Button>
+
         </form>
       </div>
     </section>
