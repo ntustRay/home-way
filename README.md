@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js 66. Refactor Create Profile``
+``Section 3:Next.js 67. Zod Library``
 
-**🏆 66 of 136 (total 173) complete.**
+**🏆 67 of 136 (total 173) complete.**
 
 #### Key notes:
 
@@ -63,6 +63,12 @@
   - Add the file `components/form/Buttons.tsx` to set up the form buttons
   - Set up the `.eslintrc.json` file to include the rules for the any of type warning
     - add the `@typescript-eslint/no-explicit-any` rule to the `.eslintrc.json` file
+- Zod Library
+  - Install the Zod library
+    - use `npm install zod` to install the package
+  - Add the file `utils/schemas.ts` to set up the profile schema
+  - Add the file `utils/actions.ts` to include the create profile action
+  - Update the file `pages/profile/create.tsx` to include the create profile action
 ---
 
 ### Next App
