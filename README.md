@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js 67. Zod Library``
+``Section 3:Next.js Play 69. Supabase Setup``
 
-**🏆 67 of 136 (total 173) complete.**
+**🏆 69 of 136 (total 173) complete.**
 
 #### Key notes:
 
@@ -69,6 +69,8 @@
   - Add the file `utils/schemas.ts` to set up the profile schema
   - Add the file `utils/actions.ts` to include the create profile action
   - Update the file `pages/profile/create.tsx` to include the create profile action
+- Set up Supbase 
+  - update thhe `env` file to keep the password
 ---
 
 ### Next App
