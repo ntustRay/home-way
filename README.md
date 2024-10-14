@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js Play 69. Supabase Setup``
+``Section 3:Next.js Play 71. Connect Prisma and Supabase``
 
-**🏆 69 of 136 (total 173) complete.**
+**🏆 71 of 136 (total 173) complete.**
 
 #### Key notes:
 
@@ -10,7 +10,7 @@
   - use ```npx shadcn@latest init``` to initialize the package
   - use ``npx shadcn@latest add button``` to add a button
 ---
-*24/10/02*
+*24/10/14*
 - Shadcn UI 
   - **Purpose of `asChild` in Shadcn UI**:
   - The `asChild` property allows you to wrap a component as a child of another component.
@@ -69,8 +69,23 @@
   - Add the file `utils/schemas.ts` to set up the profile schema
   - Add the file `utils/actions.ts` to include the create profile action
   - Update the file `pages/profile/create.tsx` to include the create profile action
-- Set up Supbase 
-  - update thhe `env` file to keep the password
+- Set up Supbase and Prisma
+  - update thhe `env` file 
+    - add the `DATABASE_URL` and `DIRECT_URL` to the `.env` file
+    - add the `?pgbouncer=true&connection_limit=1` to the `DATABASE_URL` in the `.env` file
+    - add the `PASSWORD` to the `.env` file
+  - Install the Prisma package
+    - use `npm install prisma --save-dev` to install the package
+    - use `npm install @prisma/client` to install the package
+  - Set up the Prisma
+    - use `npx prisma init` to initialize the Prisma
+    - update the `schema.prisma` file to include the model
+    ```prisma
+    model TestProfile {
+      id  String @id @default(uuid())
+      name String
+    }
+    ```
 ---
 
 ### Next App
