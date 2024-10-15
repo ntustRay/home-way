@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js Play 71. Connect Prisma and Supabase``
+``Section 3:Next.js Play 72. Prisma Crud Examples``
 
-**🏆 71 of 136 (total 173) complete.**
+**🏆 72 of 136 (total 173) complete.**
 
 #### Key notes:
 
@@ -86,6 +86,20 @@
       name String
     }
     ```
+    - use `npx prisma studio` to open the Prisma studio
+    - use `npx prisma db push` to push the database
+  - Prisma CRUD
+    - create a new record 
+      - use `const task = await prisma.task.create({ data: { content: 'some task', }, });` to create a new record
+    - get all records
+      - use `const tasks = await prisma.task.findMany();` to get all records
+    - get record by ID or unique identifier
+      - use `const user = await prisma.user.findUnique({ where: { email: 'some email', }, });` to get the record by unique identifier
+      - use `const task = await prisma.task.findUnique({ where: { id: id, }, });` to get the record by ID
+    - update record
+      - use `const updateTask = await prisma.task.update({ where: { id: id, }, data: { content: 'updated task', }, });` to update the record
+    - update or create records
+      - use `const upsertTask = await prisma.task.upsert({ where: { id: id, }, update: { content: 'some value', }, create: { content: 'some value', }, });` to update or create the record
 ---
 
 ### Next App
