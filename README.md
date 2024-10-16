@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js Play 72. Prisma Crud Examples``
+``Section 3:Next.js 73. Create Profile Model and createProfileAction``
 
-**🏆 72 of 136 (total 173) complete.**
+**🏆 73 of 136 (total 173) complete.**
 
 #### Key notes:
 

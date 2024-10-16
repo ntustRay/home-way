@@ -15,7 +15,7 @@ const CreateProfilePage = () => {
           <div className='gap-4 grid md:grid-cols-2 mt-4' >
             <FormInput name='firstName' type='text' label='First Name' />
             <FormInput name='lastName' type='text' label='Last Name' />
-            <FormInput name='email' type='email' label='Email' />
+            <FormInput name='username' type='text' label='Username' />
           </div>
           <SubmitButton text='Create Profile' className='mt-8' />
         </FormContainer>
