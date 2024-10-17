@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js 73. Create Profile Model and createProfileAction``
+``Section 3:Next.js 74. Fetch Profile Image Action``
 
-**🏆 73 of 136 (total 173) complete.**
+**🏆 74 of 136 (total 173) complete.**
 
 #### Key notes:
 
@@ -69,6 +69,7 @@
   - Add the file `utils/schemas.ts` to set up the profile schema
   - Add the file `utils/actions.ts` to include the create profile action
   - Update the file `pages/profile/create.tsx` to include the create profile action
+---
 - Set up Supbase and Prisma
   - update thhe `env` file 
     - add the `DATABASE_URL` and `DIRECT_URL` to the `.env` file
@@ -100,6 +101,21 @@
       - use `const updateTask = await prisma.task.update({ where: { id: id, }, data: { content: 'updated task', }, });` to update the record
     - update or create records
       - use `const upsertTask = await prisma.task.upsert({ where: { id: id, }, update: { content: 'some value', }, create: { content: 'some value', }, });` to update or create the record
+---
+  - Use the Prisma instance
+    - create a new file `utils/db.ts` to set up the Prisma instance
+    - update the `app/profile/create.tsx` file to include the Prisma instance
+    - update the `utils/actions.ts` file to include the Prisma instance
+      - `createProfileAction` function to create a new profile
+      - `fetchProfileImage` function to fetch the profile image
+        - use next/image to display the profile image
+        - update the img url domain to the `next.config.js` file
+        ```js
+          images: {
+            domains: ['img.clerk.com']
+          }
+        ```
+
 ---
 
 ### Next App

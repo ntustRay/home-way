@@ -7,6 +7,9 @@ const nextConfig = {
         'https://studious-goldfish-v6q574p9g4j2wj4p-3000.app.github.dev/'
       ]
     }
+  },
+  images: {
+    domains: ['img.clerk.com']
   }
 };
 
