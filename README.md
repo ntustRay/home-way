@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js 74. Fetch Profile Image Action``
+``Section 3:Next.js 75. Modify Create Profile Page``
 
-**🏆 74 of 136 (total 173) complete.**
+**🏆 75 of 136 (total 173) complete.**
 
 #### Key notes:
 
@@ -115,7 +115,7 @@
             domains: ['img.clerk.com']
           }
         ```
-
+- let already create user profile info in the database auto redirect to the home page
 ---
 
 ### Next App
