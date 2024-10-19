@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js 75. Modify Create Profile Page``
+``Section 3:Next.js 76. Fetch User Profile``
 
-**🏆 75 of 136 (total 173) complete.**
+**🏆 76 of 136 (total 173) complete.**
 
 #### Key notes:
 
