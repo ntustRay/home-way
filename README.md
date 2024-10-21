@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js 76. Fetch User Profile``
+``Section 3:Next.js 8. Zod SafeParse Method``
 
-**🏆 76 of 136 (total 173) complete.**
+**🏆 78 of 136 (total 173) complete.**
 
 #### Key notes:
 
