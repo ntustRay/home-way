@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js 8. Zod SafeParse Method``
+``Section 3:Next.js 79. ValidateWithZodSchema - Helper Function``
 
-**🏆 78 of 136 (total 173) complete.**
+**🏆 79 of 136 (total 173) complete.**
 
 #### Key notes:
 
