@@ -95,3 +95,23 @@ export const updateProfileAction = async (prevState: any, formData: FormData): P
     return renderError(error);
   }
 }
+
+export const updatePorfileImageAction = async (prevState: any, formData: FormData): Promise<{message: string}> => {
+  const user = await getAuthUser();
+  try {
+    const profileImage = formData.get('image');
+    if (!profileImage) throw new Error('No image selected');
+    await db.profile.update({
+      where: {
+        clerkId: user.id,
+      },
+      data: {
+        profileImage: profileImage.toString(),
+      },
+    });
+    revalidatePath('/profile');
+    return {message: 'Profile image updated successfully'};
+  } catch (error) {
+    return renderError(error);
+  }
+}

@@ -1,8 +1,9 @@
 import React from 'react';
 import FormContainer from '@/components/form/FormContainer';
-import {updateProfileAction, fetchProfile} from '@/utils/actions';
+import {updateProfileAction, fetchProfile, updatePorfileImageAction} from '@/utils/actions';
 import FormInput from '@/components/form/FormInput';
 import {SubmitButton} from '@/components/form/Buttons';
+import ImageInputContainer from '@/components/form/ImageInputContainer';
 
 const ProfilePage = async () => {
   const profile = await fetchProfile();
@@ -14,6 +15,12 @@ const ProfilePage = async () => {
     <section>
       <h1 className='text-2x; font-semibold mb-8 capitalize'>user profile</h1>
       <div className='border p-8 rounded-md'>
+        <ImageInputContainer
+          image={profile.profileImage}
+          name={profile.firstName}
+          action={updatePorfileImageAction}
+          text='Update Profile Image'
+        />
         <FormContainer action={updateProfileAction}>
           <div className='grid md:grid-cols-2 gap-4 mt-4'>
             <FormInput type='text' label='First Name' name='firstName' defaultValue={profile.firstName} />

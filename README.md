@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js 79. ValidateWithZodSchema - Helper Function``
+``Section 3:Next.js 81. Image Input Container``
 
-**🏆 79 of 136 (total 173) complete.**
+**🏆 81 of 136 (total 173) complete.**
 
 #### Key notes:
 
@@ -116,6 +116,12 @@
           }
         ```
 - let already create user profile info in the database auto redirect to the home page
+```ts
+// get three way to props user info
+const ImageInputContainer = (props: {image: string, name: string, action: Function, text: string, children: React.ReactNode}) => 
+const ImageInputContainer = (props: ImageInputContainerProps) => 
+const ImageInputContainer = ({image, name, action, text, children}: ImageInputContainerProps) => 
+```
 ---
 
 ### Next App
