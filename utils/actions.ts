@@ -5,6 +5,7 @@ import db from './db';
 import {auth, clerkClient, currentUser} from '@clerk/nextjs/server';
 import {revalidatePath} from 'next/cache';
 import {redirect} from 'next/navigation';
+import {imageSchema} from "./schemas";
 
 const getAuthUser = async () => {
   const user = await currentUser();
@@ -97,21 +98,8 @@ export const updateProfileAction = async (prevState: any, formData: FormData): P
 }
 
 export const updatePorfileImageAction = async (prevState: any, formData: FormData): Promise<{message: string}> => {
-  const user = await getAuthUser();
-  try {
-    const profileImage = formData.get('image');
-    if (!profileImage) throw new Error('No image selected');
-    await db.profile.update({
-      where: {
-        clerkId: user.id,
-      },
-      data: {
-        profileImage: profileImage.toString(),
-      },
-    });
-    revalidatePath('/profile');
-    return {message: 'Profile image updated successfully'};
-  } catch (error) {
-    return renderError(error);
-  }
+  const image = formData.get('image') as File;
+  const validatedFields = validateWithZodSchema(imageSchema, {image});
+  console.log('validatedFields', validatedFields);
+  return {message: 'Profile image updated successfully'};
 }

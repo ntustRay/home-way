@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js 81. Image Input Container``
+``Section 3:Next.js 82. Image Zod Validation``
 
-**🏆 81 of 136 (total 173) complete.**
+**🏆 82 of 136 (total 173) complete.**
 
 #### Key notes:
 
