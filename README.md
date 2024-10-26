@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js 82. Image Zod Validation``
+``Section 3:Next.js 85. Update Profile Image Action - Complete``
 
-**🏆 82 of 136 (total 173) complete.**
+**🏆 85 of 136 (total 173) complete.**
 
 #### Key notes:
 
@@ -116,6 +116,21 @@
           }
         ```
 - let already create user profile info in the database auto redirect to the home page
+- supabase
+  - create account and organization
+  - create project
+  - add the bucket "temp-home-away"
+  - add the environment variables to the `.env` file
+    ```bash
+    SUPABASE_URL=""
+    SUPABASE_KEY=""
+    ```
+  - install the supabase package
+    - use `npm install @supabase/supabase-js` to install the package
+    - create a new file `utils/supabase.ts` to set up the supabase instance
+    - update the `utils/actions.ts` file to include the supabase instance
+    - update the `app/profile/create.tsx` file to include the supabase instance
+
 ```ts
 // get three way to props user info
 const ImageInputContainer = (props: {image: string, name: string, action: Function, text: string, children: React.ReactNode}) => 

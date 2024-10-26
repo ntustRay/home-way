@@ -1,6 +1,6 @@
 import React from 'react';
 import FormContainer from '@/components/form/FormContainer';
-import {updateProfileAction, fetchProfile, updatePorfileImageAction} from '@/utils/actions';
+import {updateProfileAction, fetchProfile, updateProfileImageAction} from '@/utils/actions';
 import FormInput from '@/components/form/FormInput';
 import {SubmitButton} from '@/components/form/Buttons';
 import ImageInputContainer from '@/components/form/ImageInputContainer';
@@ -18,7 +18,7 @@ const ProfilePage = async () => {
         <ImageInputContainer
           image={profile.profileImage}
           name={profile.firstName}
-          action={updatePorfileImageAction}
+          action={updateProfileImageAction}
           text='Update Profile Image'
         />
         <FormContainer action={updateProfileAction}>
