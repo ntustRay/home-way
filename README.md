@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js 85. Update Profile Image Action - Complete``
+``Section 3:Next.js 86. 86. Property Schema``
 
-**🏆 85 of 136 (total 173) complete.**
+**🏆 86 of 136 (total 173) complete.**
 
 #### Key notes:
 
