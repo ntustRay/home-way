@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js 86. 86. Property Schema``
+``Section 3:Next.js 87. Create Property Page - Setup``
 
-**🏆 86 of 136 (total 173) complete.**
+**🏆 87 of 136 (total 173) complete.**
 
 #### Key notes:
 
