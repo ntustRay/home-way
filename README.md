@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js 87. Create Property Page - Setup``
+``Section 3:Next.js 88. Price Input``
 
-**🏆 87 of 136 (total 173) complete.**
+**🏆 88 of 136 (total 173) complete.**
 
 #### Key notes:
 
