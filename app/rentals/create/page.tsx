@@ -5,6 +5,7 @@ import FormContainer from '@/components/form/FormContainer';
 import {createPropertyAction} from '@/utils/actions';
 import {SubmitButton} from '@/components/form/Buttons';
 import PriceInput from '@/components/form/PriceInput';
+import CategoriesInput from '@/components/form/CategoriesInput';
 
 const CreateProperty = () => {
   return (
@@ -29,7 +30,7 @@ const CreateProperty = () => {
               defaultValue='Dream Getaway Awaits You Here'
             />
             <PriceInput />
-            {/* categories */}
+            <CategoriesInput />
           </div>
           {/* text area description */}
           <SubmitButton text='create rental' className='mt-12' />

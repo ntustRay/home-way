@@ -1,8 +1,8 @@
 ### Keep going on learning
 
-``Section 3:Next.js 88. Price Input``
+``Section 3:Next.js 89. Categories Input`
 
-**🏆 88 of 136 (total 173) complete.**
+**🏆 89 of 136 (total 173) complete.**
 
 #### Key notes:
 
