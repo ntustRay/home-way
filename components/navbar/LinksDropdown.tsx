@@ -11,7 +11,7 @@ import {Button} from '../ui/button';
 import UserIcon from './UserIcon';
 import {links} from '@/utils/links';
 import SignOutLink from './SignOutLink';
-import {SignedOut, SignedIn, SignUpButton, SignInButton} from '@clerk/nextjs';
+import { AccountVisibility, AccountButton } from "@/components/shared-auth";
 
 function LinksDropdown() {
   return (
@@ -27,20 +27,16 @@ function LinksDropdown() {
         align='start'
         sideOffset={10}
       >
-        <SignedOut>
+        <AccountVisibility signedIn={false}>
           <DropdownMenuItem>
-            <SignInButton mode='modal'>
-              <button className='w-full text-left'>Login</button>
-            </SignInButton>
+            <AccountButton provider="login">Login</AccountButton>
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem>
-            <SignUpButton mode='modal'>
-              <button className='w-full text-left'>Sign Up</button>
-            </SignUpButton>
+            <AccountButton provider="signup">Sign Up</AccountButton>
           </DropdownMenuItem>
-        </SignedOut>
-        <SignedIn>
+        </AccountVisibility>
+        <AccountVisibility signedIn>
           {links.map((link, index) => {
             return (
               <DropdownMenuItem key={link.href}>
@@ -54,7 +50,7 @@ function LinksDropdown() {
           <DropdownMenuItem>
             <SignOutLink />
           </DropdownMenuItem>
-        </SignedIn>
+        </AccountVisibility>
 
       </DropdownMenuContent>
     </DropdownMenu>

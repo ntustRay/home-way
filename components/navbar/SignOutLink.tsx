@@ -1,23 +1,9 @@
-'use client'
-
-import React from 'react';
-import {SignOutButton} from '@clerk/nextjs';
-import {useToast} from '@/hooks/use-toast';
-
-const SignOutLink = () => {
-  const {toast} = useToast();
-  const handleLogout = () => {
-    toast({
-      description: 'You have been signed out',
-    })
-  }
-  return (
-    <SignOutButton redirectUrl='/' >
-      <button className='w-full text-left' onClick={handleLogout}>
-        Logout
-      </button>
-    </SignOutButton>
-  );
+"use client";
+import { SignOutButton, useAuth } from "@ntustray/web-authentication-component/react";
+export default function SignOutLink() {
+  const { state } = useAuth();
+  return <div>
+    <SignOutButton className="w-full text-left">Logout</SignOutButton>
+    {state.operation.error && <p role="alert">Logout could not be completed. Please try again.</p>}
+  </div>;
 }
-
-export default SignOutLink;

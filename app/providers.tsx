@@ -2,10 +2,11 @@
 
 import React, {ReactNode} from 'react';
 import {ThemeProvider} from './theme-provider';
-import {Toaster} from '@/components/ui/toaster';
+import {Toaster} from "@/components/ui/toaster";
+import { SharedAuth } from "@/components/shared-auth";
 const Providers = ({children}: {children: ReactNode}) => {
   return (
-    <>
+    <SharedAuth>
       <Toaster />
       <ThemeProvider
         attribute="class"
@@ -15,7 +16,7 @@ const Providers = ({children}: {children: ReactNode}) => {
       >
         {children}
       </ThemeProvider>
-    </>
+    </SharedAuth>
   );
 }
 
