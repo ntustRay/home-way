@@ -10,6 +10,7 @@ export function SharedAuth({ children }: { children: ReactNode }) {
   const sdk = useRef(clerk);
   sdk.current = clerk;
   const [controller] = useState(() => createAuthController({
+    requireVerifiedEmail: false,
     methods: { password: false, registration: false, recovery: false, verification: false, providers: [{ id: "login", label: "Login" }, { id: "signup", label: "Sign Up" }] },
     adapter: createHostedAdapter({
       async verifySession() {

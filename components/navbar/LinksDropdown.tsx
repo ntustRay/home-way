@@ -37,7 +37,7 @@ function LinksDropdown() {
           </DropdownMenuItem>
         </AccountVisibility>
         <AccountVisibility signedIn>
-          {links.map((link, index) => {
+          {links.map((link) => {
             return (
               <DropdownMenuItem key={link.href}>
                 <Link href={link.href} className='capitalize w-full'>
