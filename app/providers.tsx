@@ -4,9 +4,9 @@ import React, {ReactNode} from 'react';
 import {ThemeProvider} from './theme-provider';
 import {Toaster} from "@/components/ui/toaster";
 import { SharedAuth } from "@/components/shared-auth";
-const Providers = ({children}: {children: ReactNode}) => {
+const Providers = ({children, userId}: {children: ReactNode; userId: string | null}) => {
   return (
-    <SharedAuth>
+    <SharedAuth userId={userId}>
       <Toaster />
       <ThemeProvider
         attribute="class"

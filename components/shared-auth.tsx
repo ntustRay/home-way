@@ -1,11 +1,12 @@
 "use client";
 import { createAuthController, failure, success } from "@ntustray/web-authentication-component";
 import { createHostedAdapter } from "@ntustray/web-authentication-component/adapters/hosted";
-import { AuthButton, AuthProvider, useAuth } from "@ntustray/web-authentication-component/react";
+import { AuthButton, AuthProvider, AuthStatus, useAuth } from "@ntustray/web-authentication-component/react";
 import { useClerk } from "@clerk/nextjs";
-import { type ReactNode, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { type ReactNode, useEffect, useRef, useState } from "react";
 
-export function SharedAuth({ children }: { children: ReactNode }) {
+export function SharedAuth({ children, userId }: { children: ReactNode; userId: string | null }) {
   const clerk = useClerk();
   const sdk = useRef(clerk);
   sdk.current = clerk;
@@ -35,7 +36,7 @@ export function SharedAuth({ children }: { children: ReactNode }) {
       },
     }, ["login", "signup"]),
   }));
-  return <AuthProvider controller={controller} locale="en">{children}</AuthProvider>;
+  return <AuthProvider controller={controller} locale="en"><SessionContent userId={userId}>{children}</SessionContent></AuthProvider>;
 }
 
 export function AccountVisibility({ signedIn, children }: { signedIn: boolean; children: ReactNode }) {
@@ -52,4 +53,17 @@ export function AccountButton({ provider, children }: { provider: "login" | "sig
     {state.operation.error && <p role="alert">Sign-in could not be completed. Please try again.</p>}
     {state.status === "unavailable" && <button type="button" onClick={() => { void refresh(); }}>Retry</button>}
   </div>;
+}
+
+function SessionContent({ userId, children }: { userId: string | null; children: ReactNode }) {
+  const { state } = useAuth();
+  const router = useRouter();
+  const pathname = usePathname();
+  const id = state.session?.user.id ?? null;
+  const privatePage = /^\/(bookings|checkout|favorites|profile|rentals|reviews)(\/|$)/.test(pathname);
+  useEffect(() => {
+    if ((state.status === "authenticated" || state.status === "anonymous") && id !== userId) router.refresh();
+  }, [state.status, id, userId, router]);
+  if (privatePage && (state.status !== "authenticated" || id !== userId)) return <AuthStatus />;
+  return children;
 }
